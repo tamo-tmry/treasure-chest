@@ -8,6 +8,7 @@ type CheckboxItemProps = {
 export const CheckboxItem = ({itemId, label, isChecked, onChangeFn}: CheckboxItemProps) => {
     return (
         <>
+            oo
             <input
                 type='checkbox'
                 id={itemId}
