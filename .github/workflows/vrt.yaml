@@ -29,4 +29,4 @@ jobs:
       - name: run storycap
         run: npm run storycap
       - name: Run reg-suit
-        run: npm run vrt:run
+        run: npm run vrt
