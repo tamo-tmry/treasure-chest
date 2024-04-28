@@ -5,6 +5,7 @@ type CheckboxItemProps = {
    onChangeFn: (id: string) => void;
 }
 
+// このコメントはテストです
 export const CheckboxItem = ({itemId, label, isChecked, onChangeFn}: CheckboxItemProps) => {
     return (
         <>
