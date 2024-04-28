@@ -9,7 +9,9 @@
     "lint": "next lint",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "test-storybook": "test-storybook"
+    "test-storybook": "test-storybook",
+    "storycap": "storycap http://localhost:9009 --serverCmd \"npx http-server storybook-static -p 9009\"",
+    "vrt": "reg-suit run"
   },
   "dependencies": {
     "next": "14.0.4",
@@ -37,7 +39,13 @@
     "eslint-config-next": "14.0.4",
     "eslint-plugin-storybook": "^0.8.0",
     "postcss": "^8",
+    "reg-keygen-git-hash-plugin": "^0.14.3",
+    "reg-notify-github-plugin": "^0.14.3",
+    "reg-notify-slack-plugin": "^0.14.2",
+    "reg-publish-s3-plugin": "^0.14.3",
+    "reg-suit": "^0.14.3",
     "storybook": "^8.0.8",
+    "storycap": "^5.0.0",
     "tailwindcss": "^3.3.0",
     "typescript": "^5"
   }
