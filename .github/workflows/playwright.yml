@@ -17,11 +17,9 @@ jobs:
       run: npm ci
     - name: Install Playwright Browsers
       run: npx playwright install --with-deps
-    - name: show base url
-      run: echo ${{ secrets.BASE_URL }}
     - name: Run Playwright tests
       run: npm run test:e2e
-      env:
+      with:
         BASE_URL: ${{ secrets.BASE_URL }}
     - uses: actions/upload-artifact@v4
       if: always()
