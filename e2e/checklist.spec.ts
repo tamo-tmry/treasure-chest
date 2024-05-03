@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 
-const appUrl = process.env.NEXT_PUBLIC_BASE_URL!
+const appUrl = process.env.BASE_URL!
 
 test('チェックリストが表示されること', async ({ page }) => {
     await page.goto(`${appUrl}/checklist`);
