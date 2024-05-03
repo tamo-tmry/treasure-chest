@@ -14,7 +14,7 @@ type Story = StoryObj<typeof CheckItemList>;
 
 export const チェックなし: Story = {
     args: {
-        checkItems: [
+        items: [
             {
                 id: '1',
                 label: 'ラベル1',
@@ -26,13 +26,12 @@ export const チェックなし: Story = {
                 isChecked: false,
             }
         ],
-        onItemChange: fn()
     }
 };
 
 export const チェックあり: Story = {
     args: {
-        checkItems: [
+        items: [
             {
                 id: '1',
                 label: 'ラベル1',
@@ -44,14 +43,13 @@ export const チェックあり: Story = {
                 isChecked: true,
             }
         ],
-        onItemChange: fn()
     }
 };
 
 export const チェックなしSP: Story = {
     parameters: smartPhoneParameters,
     args: {
-        checkItems: [
+        items: [
             {
                 id: '1',
                 label: 'ラベル1',
@@ -63,14 +61,13 @@ export const チェックなしSP: Story = {
                 isChecked: false,
             }
         ],
-        onItemChange: fn()
     }
 };
 
 export const チェックありSP: Story = {
     parameters: smartPhoneParameters,
     args: {
-        checkItems: [
+        items: [
             {
                 id: '1',
                 label: 'ラベル1',
@@ -82,6 +79,5 @@ export const チェックありSP: Story = {
                 isChecked: true,
             }
         ],
-        onItemChange: fn()
     }
 };
