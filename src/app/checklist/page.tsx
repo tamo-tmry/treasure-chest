@@ -1,5 +1,7 @@
 import { CheckItemList } from "@/app/components/organisms/CheckItemList";
 
+export const dynamic = "force-dynamic";
+
 export type ItemAPIResponse = {
     id: string;
     label: string;

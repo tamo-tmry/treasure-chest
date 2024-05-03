@@ -1,6 +1,8 @@
 import CheckItemForm from "@/app/components/organisms/CheckItemForm";
 import {Item, ItemAPIResponse} from "@/app/checklist/page";
 
+export const dynamic = "force-dynamic";
+
 const baseUrl = process.env.NEXT_PUBLIC_BASE_URL
 
 export default async function ChecklistEdit() {
