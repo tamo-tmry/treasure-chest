@@ -5,15 +5,12 @@ const apiKey = process.env.API_KEY!;
 
 export async function GET() {
   try {
-    console.log("has apiUrl: ", Boolean(apiUrl))
-    console.log("has apiKey: ", Boolean(apiKey))
     const response = await fetch(`${apiUrl}/checklsits`, {
       method: "GET",
       headers: {
         "X-MICROCMS-API-KEY": apiKey,
       },
     });
-    console.log("DEBUG : ", response.ok, response.status, response.statusText)
 
     if (!response.ok) {
       return NextResponse.json(
@@ -21,10 +18,7 @@ export async function GET() {
         { status: response.status },
       );
     } else {
-      console.log("1")
       const data = await response.json();
-      console.log(data)
-      console.log('2')
       return NextResponse.json(data);
     }
   } catch (e) {

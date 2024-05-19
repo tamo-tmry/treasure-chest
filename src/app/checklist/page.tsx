@@ -30,14 +30,12 @@ const items: Item[] = [
 const baseUrl = process.env.NEXT_PUBLIC_BASE_URL!
 
 export default async function Checklist() {
-    console.log("START REQUEST")
     const res = await fetch(
         `${baseUrl}/api/checklist`,
         {
             method: "GET",
         },
     );
-    console.log("DEBUG : ", res.ok, res.status, res.statusText)
 
     if (!res.ok) {
         throw new Error("Failed to fetch data");
@@ -54,6 +52,7 @@ export default async function Checklist() {
 
     return (
         <>
+        <h1>チェックリスト</h1>
             <CheckItemList items={items} />
         </>
     );
