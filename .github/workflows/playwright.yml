@@ -17,14 +17,16 @@ jobs:
       run: npm ci
     - name: Build
       run: npm run build
-    - name: Start
-      run: nohup npm run start
+    - name: Start server
+      run: npm run start &
+    - name: Wait for server to be ready
+      run: npx wait-on http://localhost:3000
     - name: Install Playwright Browsers
       run: npx playwright install --with-deps
     - name: Run Playwright tests
       run: npm run test-e2e
       env:
-        NEXT_PUBLIC_BASE_URL: ${{ secrets.NEXT_PUBLIC_BASE_URL}}
+        NEXT_PUBLIC_BASE_URL: ${{ secrets.NEXT_PUBLIC_BASE_URL }}
         API_URL: ${{ secrets.API_URL }}
         API_KEY: ${{ secrets.API_KEY }}
     - uses: actions/upload-artifact@v4
