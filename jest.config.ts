@@ -13,7 +13,8 @@ const config: Config = {
   },
   testMatch: [
     '**/*.test.*'
-  ]
+  ],
+  setupFilesAfterEnv: ['./jest.setup.ts']
 };
 
 export default createJestConfig(config);
