@@ -1,5 +1,6 @@
 import { render, screen, fireEvent } from "@testing-library/react";
 import CheckItemField from "./CheckItemField";
+import userEvent from "@testing-library/user-event";
 
 describe("CheckItemField", () => {
   it("renders the label and input field with the correct attributes", () => {
@@ -26,7 +27,7 @@ describe("CheckItemField", () => {
     expect(inputElement).toHaveValue("");
   });
 
-  it("should set onInput handler correctly", () => {
+  it("should set onInput handler correctly", async () => {
     const fn = jest.fn();
     render(
       <CheckItemField
@@ -37,8 +38,9 @@ describe("CheckItemField", () => {
       />,
     );
 
+    const user = userEvent.setup();
     const inputElement = screen.getByLabelText("Test Label");
-    fireEvent.input(inputElement, { target: { value: "new value" } });
+    await user.type(inputElement, "new Value");
     expect(fn).toHaveBeenCalled();
   });
 });
