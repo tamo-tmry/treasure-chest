@@ -10,7 +10,7 @@ describe("CheckItemField", () => {
         id="test-id"
         label="Test Label"
         value="Test Value"
-        onInput={() => fn}
+        onInput={fn}
       />,
     );
 

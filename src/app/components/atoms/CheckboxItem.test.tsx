@@ -10,7 +10,7 @@ describe("CheckboxItem", () => {
         itemId="test-id"
         label="Test Label"
         isChecked={false}
-        onChangeFn={() => fn}
+        onChangeFn={fn}
       />,
     );
     const checkbox = screen.getByLabelText("Test Label");
@@ -25,7 +25,7 @@ describe("CheckboxItem", () => {
         itemId="test-id"
         label="Test Label"
         isChecked={true}
-        onChangeFn={() => fn}
+        onChangeFn={fn}
       />,
     );
 
